@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import { useState } from 'react'
-import { IProduct } from './products'
+import { IProduct } from './Products'
 
 type ProductImageProps = {
   product: IProduct
@@ -21,7 +21,9 @@ export default function ProductImage({ product, fill }: ProductImageProps) {
           ? 'scale-110 blur-3xl grayscale'
           : 'scale-100 blur-0 grayscale-0'
       }`}
-      onLoadingComplete={() => setLoading(false)}
+      onLoad={() => setLoading(false)}
+      sizes='100%'
+      priority={true}
     />
   ) : (
     <Image
@@ -34,7 +36,7 @@ export default function ProductImage({ product, fill }: ProductImageProps) {
           ? 'scale-110 blur-3xl grayscale'
           : 'scale-100 blur-0 grayscale-0'
       }`}
-      onLoadingComplete={() => setLoading(false)}
+      onLoad={() => setLoading(false)}
     />
   )
 }
