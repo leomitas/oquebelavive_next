@@ -1,10 +1,11 @@
 'use client'
-import { api } from '@/services/api'
+// import { api } from '@/services/api'
 import { useEffect, useState } from 'react'
 import ProductImage from './ProductImage'
 import Link from 'next/link'
 import { formatPrice } from '@/lib/utils'
 import { Button } from './ui/button'
+import { products } from '@/database'
 
 export interface IProduct {
   id: number
@@ -17,40 +18,40 @@ export interface IProduct {
 }
 
 export default function Products() {
-  const [products, setProducts] = useState<IProduct[]>([])
+  // const [products, setProducts] = useState<IProduct[]>([])
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await api.get('product')
-        const data = response.data.products as [
-          number,
-          string,
-          string,
-          string,
-          number,
-          number,
-          string
-        ][]
-        const convertProducts: IProduct[] = data.map((tupla) => {
-          return {
-            id: tupla[0],
-            name: tupla[1],
-            description: tupla[2],
-            image: tupla[3],
-            price: tupla[4],
-            sold: tupla[5],
-            linkForSale: tupla[6],
-          }
-        })
-        setProducts(convertProducts)
-      } catch (error) {
-        console.error('Erro ao buscar dados:', error)
-      }
-    }
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const response = await api.get('product')
+  //       const data = response.data.products as [
+  //         number,
+  //         string,
+  //         string,
+  //         string,
+  //         number,
+  //         number,
+  //         string
+  //       ][]
+  //       const convertProducts: IProduct[] = data.map((tupla) => {
+  //         return {
+  //           id: tupla[0],
+  //           name: tupla[1],
+  //           description: tupla[2],
+  //           image: tupla[3],
+  //           price: tupla[4],
+  //           sold: tupla[5],
+  //           linkForSale: tupla[6],
+  //         }
+  //       })
+  //       setProducts(convertProducts)
+  //     } catch (error) {
+  //       console.error('Erro ao buscar dados:', error)
+  //     }
+  //   }
 
-    fetchData()
-  }, [])
+  //   fetchData()
+  // }, [])
 
   return (
     <div className='max-w-7xl mx-auto pt-8 px-8 xl:px-0'>
@@ -65,7 +66,7 @@ export default function Products() {
                 <ProductImage product={product} fill />
               </div>
               <div className='grid grid-cols-1 font-bold my-3'>
-                <p className='text-md'>{product.description}</p>
+                <p className='text-md'>{product.name}</p>
                 <p className='text-md text-teal-300 justify-end flex'>
                   {formatPrice(product.price)}
                 </p>
