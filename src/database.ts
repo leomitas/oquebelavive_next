@@ -32,7 +32,7 @@ export const products = [
     id: 3,
     name: 'Reta numérica e Números para sala de aula',
     description: 'Reta numérica e Números para colocar em sala de aula',
-    image: 'https://i.postimg.cc/W3RPkpP2/pdfisa2.png',
+    image: 'https://i.postimg.cc/xCwLhQFM/reta-numerica-3.png',
     price: 0,
     sold: 0,
     linkForSale:

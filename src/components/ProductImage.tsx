@@ -28,8 +28,8 @@ export default function ProductImage({ product, fill }: ProductImageProps) {
   ) : (
     <Image
       src={product.image}
-      width={400}
-      height={700}
+      width={360}
+      height={400}
       alt={product.name}
       className={`object-cover ${
         loading
