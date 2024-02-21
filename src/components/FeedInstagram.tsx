@@ -1,5 +1,4 @@
 'use client'
-import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
 import {
   Carousel,
@@ -8,19 +7,18 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel'
-import Link from 'next/link'
 
 export default function FeedInstagram() {
   const [posts, setPosts] = useState([])
 
-  const token =
-    'IGQWROQk9YVm5FZAEVaYUxEbTE4bF9ONUVjT2dmdEdEVERQNFVyRGJ2N3R3OWNNSFJIcVFaR05yT3ZAXeEtkX21GX3dTcW0xNnhpdS1LLS15VEdQWWNyMWFyaHUwZAE5GN1d1NWxSRGFnSHdRdFo5d0UyZAUhHX2JXVzAZD'
+  const token = process.env.TOKEN
   const baseURL = `https://graph.instagram.com/me/media?fields=media_type,media_url,permalink&access_token=${token}&limit=20`
   useEffect(() => {
     fetch(baseURL)
       .then((responsive) => responsive.json())
       .then((data) => {
         setPosts(data.data)
+        console.log(token)
       })
   }, [])
 
@@ -30,9 +28,26 @@ export default function FeedInstagram() {
       id='feed-instagram'
     >
       <h2 className='font-bold text-3xl'>Feed Instagram</h2>
+      <p>
+        Acompanhe minha vida de professora pedagoga e estudante de Licenciatura
+        em Matemática. Um perfil em que compartilho minha vida real, a paixão
+        pelos livros e atividades para ensinar matemática.
+      </p>
       <Carousel>
         <CarouselContent>
           {posts.map((img: any) => {
+            if (img.media_type == 'VIDEO') {
+              return (
+                <CarouselItem
+                  className='sm:basis-1/3 flex items-center max-w-96'
+                  key={img.id}
+                >
+                  <a href={img.permalink} target='_blank' className='w-full'>
+                    <video src={img.media_url} className='h-full' />
+                  </a>
+                </CarouselItem>
+              )
+            }
             return (
               <CarouselItem
                 className='sm:basis-1/3 flex items-center'
@@ -40,7 +55,6 @@ export default function FeedInstagram() {
               >
                 <a href={img.permalink} target='_blank' className='w-full'>
                   <img src={img.media_url} alt='' className='w-full' />
-                  {/* <Image src={img.media_url} alt='' width={300} height={300} /> */}
                 </a>
               </CarouselItem>
             )

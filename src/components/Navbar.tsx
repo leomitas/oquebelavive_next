@@ -15,16 +15,6 @@ export default function Navbar() {
               Home
             </Button>
           </Link>
-          {/* <Link href={'#products'}>
-            <Button variant={'link'} className='font-bold text-black text-xl'>
-              Produtos
-            </Button>
-          </Link> */}
-          {/* <Link href={'#feed-instagram'}>
-            <Button variant={'link'} className='font-bold text-black text-xl'>
-              Feed Instagram
-            </Button>
-          </Link> */}
           <Link href={'#contacts'}>
             <Button variant={'link'} className='font-bold text-black text-xl'>
               Contatos
