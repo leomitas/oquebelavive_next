@@ -11,9 +11,9 @@ import {
 export default function FeedInstagram() {
   const [posts, setPosts] = useState([])
 
-  const token = process.env.TOKEN
-  const baseURL = `https://graph.instagram.com/me/media?fields=media_type,media_url,permalink&access_token=${token}&limit=20`
   useEffect(() => {
+    const token = process.env.NEXT_PUBLIC_TOKEN
+    const baseURL = `https://graph.instagram.com/me/media?fields=media_type,media_url,permalink&access_token=${token}&limit=20`
     fetch(baseURL)
       .then((responsive) => responsive.json())
       .then((data) => {
