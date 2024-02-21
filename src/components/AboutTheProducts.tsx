@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function AboutTheProducts() {
   return (
-    <section className='max-w-7xl mx-auto xl:px-0 flex flex-col gap-6 pt-16'>
+    <section className='max-w-7xl mx-auto xl:px-0 flex flex-col gap-6 pt-16 px-16'>
       <div className='flex flex-col gap-6'>
         <h2 className='font-bold text-3xl'>
           Atividades e arquivos para professores!

@@ -19,7 +19,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={clsx(inter.className, 'bg-lavender-rose-100')}>
+      <body
+        className={clsx(
+          inter.className,
+          'bg-lavender-rose-100 max-w-full overflow-x-hidden'
+        )}
+      >
         <Navbar />
         <main>{children}</main>
         <Footer />
