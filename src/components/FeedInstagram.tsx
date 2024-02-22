@@ -18,7 +18,6 @@ export default function FeedInstagram() {
       .then((responsive) => responsive.json())
       .then((data) => {
         setPosts(data.data)
-        console.log(token)
       })
   }, [])
 
