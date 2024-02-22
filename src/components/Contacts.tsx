@@ -5,7 +5,7 @@ import { SiInstagram, SiWhatsapp } from 'react-icons/si'
 export default function Contacts() {
   return (
     <section
-      className='flex justify-between max-w-7xl mx-auto pt-8 px-8 xl:px-0 p-16'
+      className='flex justify-between max-w-7xl mx-auto pt-0 px-8 xl:px-0 p-16'
       id='contacts'
     >
       <h2 className='font-bold text-2xl flex items-center'>Oquebelavive</h2>

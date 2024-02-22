@@ -26,7 +26,7 @@ export default function Products() {
         {products.map((product) => {
           return (
             <li
-              className='flex flex-col shadow-2xl h-100 bg-lavender-rose-800 text-lavender-rose-50 p-4 rounded'
+              className='flex flex-col shadow-2xl h-100 p-4 rounded border-black border-0 bg-lavender-rose-1'
               key={product.id}
             >
               <Link href={`/product/${product.id}`}>
@@ -41,19 +41,19 @@ export default function Products() {
                 </div>
               </Link>
               {product.price !== 0 ? (
-                <Button className='p-0 bg-lavender-rose-100'>
+                <Button className='p-0 bg-lavender-rose-0'>
                   <a
                     href={product.linkForSale}
-                    className='w-full h-full items-center flex justify-center text-lavender-rose-800 font-bold'
+                    className='w-full h-full items-center flex justify-center font-bold text-black'
                   >
                     Comprar
                   </a>
                 </Button>
               ) : (
-                <Button className='p-0 bg-lavender-rose-100'>
+                <Button className='p-0 bg-lavender-rose-0'>
                   <a
                     href={product.linkForSale}
-                    className='w-full h-full items-center flex justify-center text-lavender-rose-800 font-bold'
+                    className='w-full h-full items-center flex justify-center text-black font-bold'
                   >
                     Baixar
                   </a>
