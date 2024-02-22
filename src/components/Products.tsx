@@ -44,6 +44,7 @@ export default function Products() {
                 <Button className='p-0 bg-lavender-rose-0'>
                   <a
                     href={product.linkForSale}
+                    target='_blank'
                     className='w-full h-full items-center flex justify-center font-bold text-black'
                   >
                     Comprar

@@ -34,10 +34,10 @@ export default async function ProductPage({ params }: ProductPageProps) {
           <ProductImage product={product} />
         </div>
         <div className='grid grid-cols-1 font-bold my-3 px-8 lg:px-20 lg:w-1/2 pb-8 lg:pb-0'>
-          <h2 className='text-md font-bold pb-4'>{product.name}</h2>
+          <h2 className='text-xl font-bold pb-4'>{product.name}</h2>
           <div>
             {sentences.map((sentence, index) => (
-              <p key={index} className='text-sm'>
+              <p key={index} className='text-sm font-normal'>
                 {sentence}
               </p>
             ))}
@@ -49,6 +49,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
             <Button className='p-0 bg-lavender-rose-1'>
               <a
                 href={product.linkForSale}
+                target='_blank'
                 className='w-full h-full items-center flex justify-center text-black font-bold'
               >
                 Comprar
