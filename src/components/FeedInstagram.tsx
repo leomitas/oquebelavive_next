@@ -43,7 +43,6 @@ export default function FeedInstagram() {
         <CarouselContent>
           {posts.map((img: ImgType) => {
             if (img.media_type == 'VIDEO') {
-              console.log(img)
               return (
                 <CarouselItem
                   className='sm:basis-1/3 flex items-center max-w-96'
