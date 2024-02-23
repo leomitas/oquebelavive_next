@@ -8,6 +8,13 @@ import {
   CarouselPrevious,
 } from '@/components/ui/carousel'
 
+type ImgType = {
+  id: string
+  media_url: string
+  media_type: string
+  permalink: string
+}
+
 export default function FeedInstagram() {
   const [posts, setPosts] = useState([])
 
@@ -34,15 +41,22 @@ export default function FeedInstagram() {
       </p>
       <Carousel>
         <CarouselContent>
-          {posts.map((img: any) => {
+          {posts.map((img: ImgType) => {
             if (img.media_type == 'VIDEO') {
+              console.log(img)
               return (
                 <CarouselItem
                   className='sm:basis-1/3 flex items-center max-w-96'
                   key={img.id}
                 >
                   <a href={img.permalink} target='_blank' className='w-full'>
-                    <video src={img.media_url} className='h-full' playsInline />
+                    <video
+                      src={img.media_url}
+                      className='h-full'
+                      playsInline
+                      preload='yes'
+                      muted
+                    />
                   </a>
                 </CarouselItem>
               )
