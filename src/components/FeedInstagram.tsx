@@ -49,13 +49,9 @@ export default function FeedInstagram() {
                   key={img.id}
                 >
                   <a href={img.permalink} target='_blank' className='w-full'>
-                    <video
-                      src={img.media_url}
-                      className='h-full'
-                      playsInline
-                      preload='yes'
-                      muted
-                    />
+                    <video className='h-full' playsInline preload='yes' muted>
+                      <source src={img.media_url} type='video/mp4' />
+                    </video>
                   </a>
                 </CarouselItem>
               )
