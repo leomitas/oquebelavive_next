@@ -42,30 +42,30 @@ export default function FeedInstagram() {
       <Carousel>
         <CarouselContent>
           {posts.map((img: ImgType) => {
-            if (img.media_type == 'VIDEO') {
+            if (img.media_type !== 'VIDEO') {
               return (
                 <CarouselItem
-                  className='sm:basis-1/3 flex items-center max-w-96'
+                  className='sm:basis-1/3 flex items-center'
                   key={img.id}
                 >
                   <a href={img.permalink} target='_blank' className='w-full'>
-                    <video className='h-full' playsInline preload='yes' muted>
-                      <source src={img.media_url} type='video/mp4' />
-                    </video>
+                    <img src={img.media_url} alt='' className='w-full' />
                   </a>
                 </CarouselItem>
               )
             }
-            return (
-              <CarouselItem
-                className='sm:basis-1/3 flex items-center'
-                key={img.id}
-              >
-                <a href={img.permalink} target='_blank' className='w-full'>
-                  <img src={img.media_url} alt='' className='w-full' />
-                </a>
-              </CarouselItem>
-            )
+            // return (
+            //   <CarouselItem
+            //     className='sm:basis-1/3 flex items-center max-w-96'
+            //     key={img.id}
+            //   >
+            //     <a href={img.permalink} target='_blank' className='w-full'>
+            //       <video className='h-full' playsInline preload='yes' muted>
+            //         <source src={img.media_url} type='video/mp4' />
+            //       </video>
+            //     </a>
+            //   </CarouselItem>
+            // )
           })}
         </CarouselContent>
         <CarouselPrevious />
