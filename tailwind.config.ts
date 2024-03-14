@@ -18,6 +18,9 @@ const config = {
       },
     },
     extend: {
+      height: {
+        '110': '530px',
+      },
       colors: {
         'lavender-rose': {
           '0': '#f0ede7',

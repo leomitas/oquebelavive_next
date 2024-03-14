@@ -9,19 +9,19 @@ export default function Navbar() {
         <li className='flex items-center'>
           <h2 className='text-black font-bold text-xl'>Oquebelavive</h2>
         </li>
-        <li className='flex gap-4'>
+        <li className='flex gap-4 md:px-4'>
           <Link href={'/'}>
             <Button
-              variant={'link'}
-              className='font-bold text-black text-xl p-0'
+              variant={'default'}
+              className='font-bold text-black text-xl p-0 px-4 bg-lavender-rose-0 hover:bg-lavender-rose-1'
             >
               Home
             </Button>
           </Link>
           <Link href={'#contacts'}>
             <Button
-              variant={'link'}
-              className='font-bold text-black text-xl p-0'
+              variant={'default'}
+              className='font-bold text-black text-xl p-0 px-4 bg-lavender-rose-0 hover:bg-lavender-rose-1'
             >
               Contatos
             </Button>

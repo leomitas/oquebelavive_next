@@ -33,7 +33,7 @@ export default function FeedInstagram() {
       className='max-w-7xl mx-auto pt-8 px-8 xl:px-0 flex flex-col gap-6 p-16'
       id='feed-instagram'
     >
-      <h2 className='font-bold text-3xl'>Feed Instagram</h2>
+      <h2 className='font-bold text-3xl text-center'>Feed Instagram</h2>
       <p>
         Acompanhe minha vida de professora pedagoga e estudante de Licenciatura
         em Matemática. Um perfil em que compartilho minha vida real, a paixão

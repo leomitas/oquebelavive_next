@@ -11,25 +11,11 @@ type ProductImageProps = {
 
 export default function ProductImage({ product, fill }: ProductImageProps) {
   const [loading, setLoading] = useState(true)
-  return fill ? (
+  return (
     <Image
       src={product.image}
-      fill
-      alt={product.name}
-      className={`object-cover ${
-        loading
-          ? 'scale-110 blur-3xl grayscale'
-          : 'scale-100 blur-0 grayscale-0'
-      }`}
-      onLoad={() => setLoading(false)}
-      sizes='100%'
-      priority={true}
-    />
-  ) : (
-    <Image
-      src={product.image}
-      width={360}
-      height={400}
+      width={270}
+      height={250}
       alt={product.name}
       className={`object-cover ${
         loading
