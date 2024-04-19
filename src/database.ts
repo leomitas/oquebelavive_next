@@ -12,7 +12,7 @@ export const aboutMe = {
   image:
     'https://i.postimg.cc/BvLhDPDb/Whats-App-Image-2024-03-14-at-10-21-47.jpg',
   description:
-    'Meu nome é Isabela, nasci em Taubaté-SP, tenho 24 anos e comecei a dar aulas em 2020.. Me formei em Pedagogia na UNITAU, fiz uma pós graduação em Psicopedagogia e hoje curso minha segunda graduação, dessa vez em Licenciatura em Matemática.. Desde pequena brincava de escolinha com as minhas bonecas, primas e meu irmão, até preenchia cadernetas, daquelas que vendem em papelarias, e montava atividades no computador.. Atualmente dou aulas para turmas de 1° ao 5° ano de matemática na prefeitura da minha cidade e aproveito meu tempo livre para compartilhar um pouco do meu dia a dia e ideias de atividades lá no Instagram (oquebelavive).. É um prazer te receber na minha lojinha, espero que goste!',
+    'Meu nome é Isabela, nasci em Taubaté-SP, tenho 25 anos e comecei a dar aulas em 2020.. Me formei em Pedagogia na UNITAU, fiz uma pós graduação em Psicopedagogia e hoje curso minha segunda graduação, dessa vez em Licenciatura em Matemática.. Desde pequena brincava de escolinha com as minhas bonecas, primas e meu irmão, até preenchia cadernetas, daquelas que vendem em papelarias, e montava atividades no computador.. Atualmente dou aulas para turmas de 1° ao 5° ano de matemática na prefeitura da minha cidade e aproveito meu tempo livre para compartilhar um pouco do meu dia a dia e ideias de atividades lá no Instagram (oquebelavive).. É um prazer te receber na minha lojinha, espero que goste!',
 }
 
 export const products = [
