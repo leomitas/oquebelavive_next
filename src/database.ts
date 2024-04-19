@@ -34,7 +34,7 @@ export const products = [
     image: 'https://i.postimg.cc/VvJH2M4M/pdfisa.png',
     price: 7.9,
     sold: 0,
-    linkForSale: 'https://mpago.la/1rVMtm5',
+    linkForSale: 'https://mpago.la/1T6DAaj',
   },
   {
     id: 3,
@@ -44,7 +44,7 @@ export const products = [
     image: 'https://i.postimg.cc/PqW5BTgn/ficha-individual1.jpg',
     price: 4.9,
     sold: 0,
-    linkForSale: 'https://mpago.la/1fKFr6K',
+    linkForSale: 'https://mpago.la/2Q5cADr',
   },
   {
     id: 4,
